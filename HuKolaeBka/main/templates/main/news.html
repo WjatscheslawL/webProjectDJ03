@@ -1,9 +1,15 @@
-{% extends 'main/layouts.html' %}
+{% extends 'main/layout.html' %}
 
 {% block title %}
-    <title>Вторая страничка </title>
+	<title>Новостная страница</title>
 {% endblock %}
-{% block content%}
-    <h1>Добро пожаловать на сайт {{caption}}! </h1>
-    <h4>Это вторая страница сайта по уроку номер 2</h4>
+
+{% block content %}
+<h1>Новостная страница - main</h1>
+{% for new in newss %}
+<div>
+	<h3> {{ new.title }} </h3>
+	<p> {{ new.short_description }} </p>
+</div>
+{% endfor %}
 {% endblock %}
